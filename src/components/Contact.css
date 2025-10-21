@@ -1,0 +1,115 @@
+/* src/components/Contact.css */
+.contact-section {
+    background-color: var(--bg-light); /* Utilisez bg-light pour cette section */
+    color: var(--text-light);
+    padding: 100px 20px; /* Consistant avec les autres sections */
+    text-align: center;
+  }
+  
+  .contact-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adaptatif */
+    gap: 30px; /* Espacement entre les cartes */
+    justify-content: center;
+    max-width: 1000px; /* Limite la largeur de la grille */
+    margin: 0 auto;
+  }
+  
+  .contact-card {
+    background-color: var(--bg-dark); /* Fond plus sombre pour les cartes de contact */
+    padding: 35px 25px; /* Plus d'espace interne */
+    border-radius: var(--border-radius-base); /* Utilise la variable de rayon */
+    box-shadow: 0 6px 20px var(--shadow-color); /* Ombre élégante */
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; /* Centre le contenu horizontalement */
+    text-align: center;
+    height: 100%; /* S'assure que les cartes ont la même hauteur */
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-8px) scale(1.02); /* Soulèvement et léger zoom au survol */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* Ombre plus forte */
+  }
+  
+  .contact-icon {
+    font-size: 3.5rem; /* Grandes icônes */
+    color: var(--accent-grenat); /* Couleur d'accent */
+    margin-bottom: 20px; /* Espacement sous l'icône */
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Légère ombre pour les icônes */
+  }
+  
+  .card-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem; /* Titres de carte */
+    color: var(--text-light);
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .contact-card a {
+    color: var(--text-dark); /* Texte des liens plus discret */
+    font-size: 1.1rem;
+    font-weight: 400;
+    transition: color var(--transition-speed) ease;
+  }
+  
+  .contact-card a:hover {
+    color: var(--accent-grenat); /* Grenat au survol */
+    text-decoration: underline; /* Souligne les liens au survol */
+  }
+  
+  .social-links {
+    display: flex;
+    flex-direction: column; /* Liens sociaux en colonne */
+    gap: 10px; /* Espacement entre les liens */
+    margin-top: 10px; /* Espacement après le titre */
+  }
+  
+  .social-links a {
+    display: flex; /* Permet d'aligner icône et texte */
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color var(--transition-speed) ease, transform 0.2s ease;
+  }
+  
+  .social-links a:hover {
+    color: var(--accent-grenat);
+    transform: translateX(5px); /* Décalage léger au survol */
+    text-decoration: none; /* Pas de soulignement ici, le décalage suffit */
+  }
+  
+  .social-icon {
+    font-size: 1.5rem; /* Taille des icônes sociales */
+    margin-right: 10px;
+    color: var(--text-dark); /* Couleur par défaut */
+    transition: color var(--transition-speed) ease;
+  }
+  
+  .social-links a:hover .social-icon {
+    color: var(--accent-grenat); /* Icône prend la couleur au survol */
+  }
+  
+  /* Media Queries pour la responsivité */
+  @media (max-width: 768px) {
+    .contact-cards-grid {
+      grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+    }
+    .contact-card {
+      padding: 30px 20px;
+    }
+    .contact-icon {
+      font-size: 3rem;
+    }
+    .card-title {
+      font-size: 1.6rem;
+    }
+    .contact-card a, .social-links a {
+      font-size: 1rem;
+    }
+  }

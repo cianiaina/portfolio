@@ -1,0 +1,151 @@
+/* src/index.css */
+
+/* Import des polices Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@300;400;600&display=swap');
+
+/* Variables de couleurs pour le thème Noir et Grenat (affinées) */
+:root {
+  --bg-dark: #121212;        /* Noir très profond */
+  --bg-light: #1e1e1e;       /* Gris très foncé pour sections alternées */
+  --accent-grenat: #B22222;  /* Grenat vif et élégant (Firebrick) */
+  --accent-grenat-hover: #990000; /* Grenat plus foncé pour le survol */
+  --text-light: #e0e0e0;     /* Texte clair, légèrement cassé */
+  --text-dark: #a0a0a0;      /* Texte secondaire/neutre, gris moyen */
+  --border-color: #333333;   /* Bordures discrètes */
+  --shadow-color: rgba(0, 0, 0, 0.4); /* Ombre plus prononcée pour la profondeur */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif; /* Police claire et lisible pour le corps */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  line-height: 1.7; /* Légèrement augmenté pour une meilleure lisibilité */
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* Police moderne et impactante pour les titres */
+  color: var(--text-light);
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  font-weight: 700; /* Assure que les titres sont bien gras */
+}
+
+p {
+  margin-bottom: 1em;
+  font-size: 1rem; /* Assure une taille de base */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--accent-grenat);
+  text-decoration: none;
+}
+
+/* Styles pour les séparateurs (triangles) */
+.separator {
+  text-align: center;
+  margin: 60px 0; /* Plus d'espacement pour aérer */
+  color: var(--border-color);
+  font-size: 1.8rem; /* Légèrement plus grand */
+  letter-spacing: 0.2em; /* Pour espacer un peu les triangles */
+  opacity: 0.7; /* Plus subtil */
+}
+
+/* Styles pour les boutons d'action */
+.cta-button {
+  background-color: var(--accent-grenat);
+  color: var(--text-light);
+  padding: 14px 30px; /* Plus grand */
+  border: none;
+  border-radius: 8px; /* Plus arrondi */
+  font-size: 1.15rem; /* Plus grand */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  font-weight: 600; /* Légèrement moins gras, plus moderne */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre par défaut */
+}
+
+.cta-button:hover {
+  background-color: var(--accent-grenat-hover);
+  transform: translateY(-3px); /* Effet plus prononcé */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Ombre plus forte au survol */
+}
+
+/* Pour que les sections prennent de la place */
+section {
+  padding: 80px 20px; /* Plus de padding pour aérer les sections */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 3.2rem; /* Plus grand pour l'impact */
+  margin-bottom: 2.5rem; /* Plus d'espace */
+  position: relative;
+  display: inline-block;
+  font-weight: 800; /* Très gras pour les titres de section */
+  letter-spacing: 0.05em; /* Léger espacement des lettres */
+}
+
+/* Ligne sous les titres de section */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 70px; /* Légèrement plus long */
+  height: 4px; /* Plus épais */
+  background-color: var(--accent-grenat);
+  margin: 15px auto 0; /* Plus d'espace et centré */
+  border-radius: 2px; /* Adoucit les bords de la ligne */
+}
+
+/* Styles de base pour les petits labels "Download the CV" et "BACK TO TOP" */
+.small-label {
+  font-size: 0.95rem; /* Un peu plus grand */
+  color: var(--text-dark);
+  font-weight: 400; /* Moins gras */
+}
+
+/* Media Queries pour la responsivité */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.5rem;
+  }
+  .cta-button {
+    padding: 12px 25px;
+    font-size: 1.05rem;
+  }
+  section {
+    padding: 60px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  h1 {
+    font-size: 2.5rem !important; /* Pour que le H1 de Home soit bien lisible sur mobile */
+  }
+  .cta-button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}

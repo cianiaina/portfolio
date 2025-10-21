@@ -1,0 +1,32 @@
+.about-section {
+    background: rgba(255, 255, 255, 0.1); /* effet transparent */
+    
+    border-radius: 20px;
+    padding: 40px;
+    margin: 40px auto;
+    max-width: 800px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .about-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 40px rgba(255, 255, 255, 0.2);
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffafcc;
+    letter-spacing: 1px;
+  }
+  
+  .about-description {
+    line-height: 1.8;
+    font-size: 1rem;
+    text-align: justify;
+    color: #e0e0e0;
+  }
+  

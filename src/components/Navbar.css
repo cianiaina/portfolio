@@ -1,0 +1,96 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1.2rem 5%; /* Légèrement moins de padding pour être plus compact */
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border-color); /* Utilise la variable de bordure */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Légère ombre pour la profondeur */
+  }
+  
+  .navbar-logo {
+    margin-right: auto;
+    font-size: 2rem; /* Plus grand pour le logo */
+    font-weight: 800; /* Plus gras */
+    font-family: 'Montserrat', sans-serif; /* Utilise la police des titres */
+    letter-spacing: 0.05em; /* Léger espacement */
+  }
+  
+  .navbar-logo a {
+    color: var(--accent-grenat);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-logo a:hover {
+    color: var(--accent-grenat-hover);
+  }
+  
+  .navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 3rem; /* Plus d'espacement entre les liens */
+  }
+  
+  .navbar-links li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1.05rem; /* Ajusté */
+    font-weight: 600; /* Plus gras */
+    transition: color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    padding: 5px 0; /* Pour donner de l'espace à la ligne du dessous */
+  }
+  
+  .navbar-links li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px; /* Plus épais */
+    background-color: var(--accent-grenat);
+    bottom: -8px; /* Positionne la ligne plus bas */
+    left: 50%; /* Commence au centre */
+    transform: translateX(-50%); /* Pour centrer la ligne */
+    transition: width 0.3s ease;
+    border-radius: 2px;
+  }
+  
+  .navbar-links li a:hover::after,
+  .navbar-links li a.active::after {
+    width: 100%;
+  }
+  
+  .navbar-links li a:hover {
+    color: var(--accent-grenat); /* Le texte prend la couleur d'accent au survol */
+    transform: translateY(-2px); /* Très léger effet de soulèvement */
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      padding: 1rem 3%;
+    }
+    .navbar-logo {
+      margin-right: 0;
+      margin-bottom: 1rem;
+      font-size: 1.6rem;
+    }
+    .navbar-links {
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: center;
+    }
+    .navbar-links li a {
+      font-size: 0.95rem;
+    }
+    .navbar-links li a::after {
+      bottom: -3px; /* Ajuste la position de la ligne sur mobile */
+    }
+  }

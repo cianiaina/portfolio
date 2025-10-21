@@ -1,0 +1,53 @@
+/* src/components/Skills.css */
+.skills-section {
+    background-color: var(--bg-dark); /* Utilise bg-dark */
+    color: var(--text-light);
+    padding: 80px 20px;
+    text-align: center;
+  }
+  
+  .skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Plus d'espacement entre les tags */
+    max-width: 1000px; /* Légèrement plus large */
+    margin: 0 auto;
+  }
+  
+  .skill-tag {
+    background-color: var(--bg-light); /* Utilise bg-light pour les tags */
+    color: var(--text-light);          /* Texte clair sur les tags */
+    padding: 16px 35px; /* Tags plus grands et plus aérés */
+    border-radius: 10px; /* Coins plus arrondis pour un look moderne */
+    font-size: 1.15rem; /* Texte un peu plus grand */
+    font-weight: 600; /* Gras, mais pas trop */
+    text-transform: uppercase;
+    letter-spacing: 0.08em; /* Léger espacement des lettres */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px var(--shadow-color); /* Ombre plus prononcée */
+    cursor: pointer; /* Indique que c'est interactif */
+  }
+  
+  .skill-tag:hover {
+    background-color: var(--accent-grenat); /* Grenat au survol */
+    transform: translateY(-7px) scale(1.03); /* Effet plus dynamique */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Ombre plus forte au survol */
+    color: white; /* Texte reste blanc ou très clair sur le grenat */
+  }
+  
+  @media (max-width: 768px) {
+    .skills-grid {
+      gap: 15px;
+    }
+    .skill-tag {
+      font-size: 1rem;
+      padding: 12px 25px;
+    }
+  }
+  @media (max-width: 480px) {
+    .skill-tag {
+      font-size: 0.9rem;
+      padding: 10px 20px;
+    }
+  }
