@@ -1,24 +1,22 @@
 {
-  "name": "portoflio",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio Francia",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "module",
+  "engines": {
+    "node": "20.x"
+  },
   "dependencies": {
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-icons": "^5.5.0"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-react": "^5.0.4",
-    "vite": "^7.1.11"
+    "react-icons": "^5.5.0",
+    "vite": "^7.1.11",
+    "@vitejs/plugin-react": "^5.0.4"
   }
 }
